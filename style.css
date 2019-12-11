@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc((100vh - 600px) / 2);
+    margin-left: calc((100vw - 600px) / 2);
+    box-shadow: 10px 10px 15px rgba(201,195,201,1);
+}
+
+.quadrato {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+.quadrato.verde {
+    background-color: #15a465;
+}
+
+.quadrato.giallo {
+    background-color: #c5e913;
+}

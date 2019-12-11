@@ -12,12 +12,18 @@ $(document).ready(function(){
             url : 'https://flynn.boolean.careers/exercises/api/random/int',
             method : 'GET',
             success : function (data) {
-            $(currentSquare).html(data);
-            // se il numero <= 5 il quadratino diventa giallo
-            // se il numero > 5 il quadratino diventa verde
+                console.log(data.response);
+                // $(currentSquare).html('<span>'+ data.response +'</span>');
+                // se il numero <= 5 il quadratino diventa giallo
+                if (data.response <= 5) {
+                    $(currentSquare).addClass('giallo');
+                } else {
+                // se il numero > 5 il quadratino diventa verde
+                    $(currentSquare).addClass('verde');
+                }
             },
-            error : function (richiesta,stato,errori) {
-            alert("E' avvenuto un errore. "+errore);
+            error : function () {
+            alert("E' avvenuto un errore");
             }
         });
     })
